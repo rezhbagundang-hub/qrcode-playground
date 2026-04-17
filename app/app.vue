@@ -1,6 +1,50 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
-    <div class="max-w-2xl w-full">
+  <div class="min-h-screen bg-gradient-to-br from-sky-400 via-blue-500 to-blue-600 flex items-center justify-center p-4 relative overflow-hidden">
+    <!-- Clouds -->
+    <div class="absolute top-10 left-10 opacity-70">
+      <svg width="100" height="60" viewBox="0 0 100 60" fill="white">
+        <circle cx="20" cy="40" r="15"/>
+        <circle cx="35" cy="35" r="18"/>
+        <circle cx="50" cy="40" r="15"/>
+        <circle cx="65" cy="38" r="12"/>
+      </svg>
+    </div>
+    <div class="absolute top-20 right-20 opacity-60">
+      <svg width="120" height="70" viewBox="0 0 120 70" fill="white">
+        <circle cx="25" cy="45" r="18"/>
+        <circle cx="45" cy="40" r="22"/>
+        <circle cx="65" cy="45" r="18"/>
+        <circle cx="85" cy="42" r="15"/>
+      </svg>
+    </div>
+    <div class="absolute bottom-20 left-1/4 opacity-50">
+      <svg width="80" height="50" viewBox="0 0 80 50" fill="white">
+        <circle cx="15" cy="35" r="12"/>
+        <circle cx="30" cy="30" r="15"/>
+        <circle cx="45" cy="35" r="12"/>
+        <circle cx="60" cy="33" r="10"/>
+      </svg>
+    </div>
+    <!-- Birds -->
+    <div class="absolute top-32 left-1/3 opacity-80">
+      <svg width="40" height="20" viewBox="0 0 40 20" fill="none" stroke="white" stroke-width="2">
+        <path d="M5 10 Q10 5 15 10 Q20 15 25 10 Q30 5 35 10"/>
+        <circle cx="8" cy="8" r="1"/>
+        <circle cx="12" cy="8" r="1"/>
+        <circle cx="28" cy="8" r="1"/>
+        <circle cx="32" cy="8" r="1"/>
+      </svg>
+    </div>
+    <div class="absolute top-40 right-1/3 opacity-70">
+      <svg width="50" height="25" viewBox="0 0 50 25" fill="none" stroke="white" stroke-width="2">
+        <path d="M5 12 Q12 7 20 12 Q28 17 35 12 Q42 7 50 12"/>
+        <circle cx="10" cy="10" r="1"/>
+        <circle cx="15" cy="10" r="1"/>
+        <circle cx="35" cy="10" r="1"/>
+        <circle cx="40" cy="10" r="1"/>
+      </svg>
+    </div>
+    <div class="max-w-2xl w-full relative z-10">
       <!-- Header -->
       <div class="text-center mb-12">
         <h1 class="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-3">
