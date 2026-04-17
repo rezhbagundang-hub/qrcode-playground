@@ -1,140 +1,180 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-sky-400 via-blue-500 to-blue-600 flex items-center justify-center p-4 relative overflow-hidden">
-    <!-- Clouds -->
-    <div class="absolute top-10 left-10 opacity-70">
-      <svg width="100" height="60" viewBox="0 0 100 60" fill="white">
-        <circle cx="20" cy="40" r="15"/>
-        <circle cx="35" cy="35" r="18"/>
-        <circle cx="50" cy="40" r="15"/>
-        <circle cx="65" cy="38" r="12"/>
-      </svg>
-    </div>
-    <div class="absolute top-20 right-20 opacity-60">
-      <svg width="120" height="70" viewBox="0 0 120 70" fill="white">
-        <circle cx="25" cy="45" r="18"/>
-        <circle cx="45" cy="40" r="22"/>
-        <circle cx="65" cy="45" r="18"/>
-        <circle cx="85" cy="42" r="15"/>
-      </svg>
-    </div>
-    <div class="absolute bottom-20 left-1/4 opacity-50">
-      <svg width="80" height="50" viewBox="0 0 80 50" fill="white">
-        <circle cx="15" cy="35" r="12"/>
-        <circle cx="30" cy="30" r="15"/>
-        <circle cx="45" cy="35" r="12"/>
-        <circle cx="60" cy="33" r="10"/>
-      </svg>
-    </div>
-    <!-- Birds -->
-    <div class="absolute top-32 left-1/3 opacity-80">
-      <svg width="40" height="20" viewBox="0 0 40 20" fill="none" stroke="white" stroke-width="2">
-        <path d="M5 10 Q10 5 15 10 Q20 15 25 10 Q30 5 35 10"/>
-        <circle cx="8" cy="8" r="1"/>
-        <circle cx="12" cy="8" r="1"/>
-        <circle cx="28" cy="8" r="1"/>
-        <circle cx="32" cy="8" r="1"/>
-      </svg>
-    </div>
-    <div class="absolute top-40 right-1/3 opacity-70">
-      <svg width="50" height="25" viewBox="0 0 50 25" fill="none" stroke="white" stroke-width="2">
-        <path d="M5 12 Q12 7 20 12 Q28 17 35 12 Q42 7 50 12"/>
-        <circle cx="10" cy="10" r="1"/>
-        <circle cx="15" cy="10" r="1"/>
-        <circle cx="35" cy="10" r="1"/>
-        <circle cx="40" cy="10" r="1"/>
-      </svg>
-    </div>
-    <div class="max-w-2xl w-full relative z-10">
-      <!-- Header -->
-      <div class="text-center mb-12">
-        <h1 class="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-3">
-          QR Code Generator
-        </h1>
-        <p class="text-gray-400 text-lg">Create beautiful QR codes instantly</p>
+  <div class="min-h-screen bg-gradient-to-br from-sky-400 via-sky-500 to-blue-700 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.45),_transparent_18%),radial-gradient(circle_at_bottom_right,_rgba(59,130,246,0.18),_transparent_22%)]" />
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-8 left-12 opacity-90">
+        <svg width="160" height="100" viewBox="0 0 160 100" fill="white">
+          <ellipse cx="46" cy="55" rx="28" ry="22" />
+          <ellipse cx="70" cy="45" rx="38" ry="28" />
+          <ellipse cx="105" cy="55" rx="26" ry="20" />
+          <ellipse cx="130" cy="50" rx="20" ry="16" />
+        </svg>
       </div>
-
-      <!-- Main Card -->
-      <div class="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl shadow-2xl p-8 border border-slate-600/50">
-        <!-- Text Input -->
-        <div class="mb-8">
-          <label class="block text-sm font-semibold text-gray-300 mb-3">Text to Encode</label>
-          <UInput
-            v-model="text"
-            placeholder="Enter text or URL..."
-            class="w-full"
-            size="lg"
-          />
-        </div>
-
-        <!-- Variant Selector -->
-        <div class="mb-8">
-          <label class="block text-sm font-semibold text-gray-300 mb-3">QR Style</label>
-          <USelect
-            v-model="variant"
-            :items="variants"
-            placeholder="Select a style..."
-            class="w-full"
-            size="lg"
-          />
-        </div>
-
-        <!-- QR Code Display -->
-        <div class="flex justify-center mb-8">
-          <div class="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-8 border border-white/10 shadow-inner">
-            <img
-              :src="qr"
-              alt="QR Code"
-              width="300"
-              height="300"
-              class="transition-transform duration-300 hover:scale-105"
-            />
-          </div>
-        </div>
-
-        <!-- Info Text -->
-        <div class="text-center text-sm text-gray-400">
-          <p>{{ text.length }} characters • Scan to test</p>
-        </div>
+      <div class="absolute top-24 right-14 opacity-75">
+        <svg width="200" height="110" viewBox="0 0 200 110" fill="white">
+          <ellipse cx="52" cy="58" rx="34" ry="24" />
+          <ellipse cx="88" cy="48" rx="44" ry="32" />
+          <ellipse cx="132" cy="58" rx="32" ry="24" />
+          <ellipse cx="168" cy="53" rx="24" ry="18" />
+        </svg>
       </div>
+      <div class="absolute top-14 left-1/2 -translate-x-1/2 opacity-70">
+        <svg width="180" height="90" viewBox="0 0 180 90" fill="white">
+          <ellipse cx="40" cy="50" rx="24" ry="18" />
+          <ellipse cx="70" cy="40" rx="34" ry="26" />
+          <ellipse cx="105" cy="50" rx="28" ry="22" />
+          <ellipse cx="135" cy="46" rx="18" ry="14" />
+        </svg>
+      </div>
+      <div class="absolute bottom-20 left-16 opacity-65">
+        <svg width="140" height="80" viewBox="0 0 140 80" fill="white">
+          <ellipse cx="34" cy="47" rx="26" ry="20" />
+          <ellipse cx="64" cy="40" rx="34" ry="26" />
+          <ellipse cx="96" cy="47" rx="26" ry="20" />
+          <ellipse cx="120" cy="44" rx="18" ry="14" />
+        </svg>
+      </div>
+      <div class="absolute bottom-12 right-12 opacity-70">
+        <svg width="120" height="70" viewBox="0 0 120 70" fill="white">
+          <ellipse cx="24" cy="40" rx="18" ry="14" />
+          <ellipse cx="44" cy="35" rx="24" ry="18" />
+          <ellipse cx="68" cy="45" rx="20" ry="16" />
+          <ellipse cx="92" cy="42" rx="14" ry="12" />
+        </svg>
+      </div>
+      <div class="absolute top-10 right-1/2 -translate-x-1/2">
+        <div class="h-44 w-44 rounded-full bg-white/20 blur-3xl" />
+      </div>
+    </div>
 
-      <!-- Footer -->
-      <div class="text-center mt-8 text-gray-500 text-sm">
-        <p>✨ Powered by Nuxt QR Code</p>
+    <div class="relative z-10 flex min-h-screen items-center justify-center px-4 py-10">
+      <div class="w-full max-w-5xl">
+        <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
+          <!-- Info panel -->
+          <section class="space-y-6 text-white">
+            <div class="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-sky-200 shadow-lg shadow-sky-500/10 backdrop-blur">
+              Beautiful QR code studio
+            </div>
+
+            <div class="rounded-[2rem] border border-white/20 bg-white/10 p-10 shadow-2xl shadow-slate-950/30 backdrop-blur-xl ring-1 ring-white/10">
+              <div class="space-y-6">
+                <div class="space-y-3">
+                  <p class="text-sm uppercase tracking-[0.3em] text-sky-300/80">Create, preview, and share</p>
+                  <h1 class="text-5xl font-semibold tracking-tight text-white sm:text-6xl">
+                    Generate stunning QR codes in seconds
+                  </h1>
+                  <p class="max-w-xl text-lg leading-8 text-slate-300/90">
+                    Type any text or URL, pick a style, and watch your QR update live with a polished preview and gentle glassmorphism textures.
+                  </p>
+                </div>
+
+                <div class="grid gap-4 sm:grid-cols-2">
+                  <div class="rounded-3xl bg-slate-950/90 p-5 border border-white/10 shadow-xl shadow-slate-950/20">
+                    <p class="text-sm text-slate-400">Preview</p>
+                    <p class="mt-2 text-4xl font-semibold text-white">Live update</p>
+                  </div>
+                  <div class="rounded-3xl bg-slate-950/90 p-5 border border-white/10 shadow-xl shadow-slate-950/20">
+                    <p class="text-sm text-slate-400">Character count</p>
+                    <p class="mt-2 text-4xl font-semibold text-white">{{ charCount }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- QR card -->
+          <section class="rounded-[2rem] border border-white/20 bg-white/10 p-8 shadow-2xl shadow-slate-950/35 backdrop-blur-xl ring-1 ring-white/10">
+            <div class="space-y-6">
+              <div class="space-y-3">
+                <p class="text-sm uppercase tracking-[0.32em] text-slate-400">QR code builder</p>
+                <h2 class="text-3xl font-semibold text-white">Customize your code</h2>
+                <p class="text-slate-400">Switch styles, update text, and copy or scan the latest QR instantly.</p>
+              </div>
+
+              <div class="space-y-6">
+                <label class="block text-sm font-semibold text-slate-300">Text to encode</label>
+                <UInput
+                  v-model="text"
+                  placeholder="Enter text or URL..."
+                  class="w-full rounded-3xl border border-slate-700 bg-slate-950/90 text-white placeholder:text-slate-500"
+                  size="lg"
+                />
+
+                <div>
+                  <label class="block text-sm font-semibold text-slate-300 mb-3">QR style</label>
+                  <USelect
+                    v-model="variant"
+                    :items="variants"
+                    placeholder="Select a style..."
+                    class="w-full rounded-3xl border border-slate-700 bg-slate-950/90 text-white placeholder:text-slate-500"
+                    size="lg"
+                  />
+                </div>
+              </div>
+
+              <div class="rounded-[2rem] border border-white/15 bg-white/10 p-6 shadow-inner shadow-slate-950/15">
+                <div class="flex items-center justify-between text-sm text-slate-500 mb-4">
+                  <span class="font-medium text-white">QR preview</span>
+                  <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-slate-300">
+                    <span class="h-2 w-2 rounded-full bg-emerald-400" /> live
+                  </span>
+                </div>
+                <div class="flex justify-center">
+                  <div class="rounded-[2rem] bg-white/10 p-6 border border-white/10 shadow-2xl shadow-slate-950/25 transition-transform duration-300 hover:-translate-y-1">
+                    <img
+                      :src="qr"
+                      alt="QR Code"
+                      width="300"
+                      height="300"
+                      class="h-[300px] w-[300px] object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div class="rounded-3xl border border-white/10 bg-slate-950/80 p-4 text-slate-300">
+                  <p class="text-sm text-slate-500">Current style</p>
+                  <p class="mt-2 font-semibold text-white">{{ variant }}</p>
+                </div>
+                <div class="rounded-3xl border border-white/10 bg-slate-950/80 p-4 text-slate-300">
+                  <p class="text-sm text-slate-500">Scannable</p>
+                  <p class="mt-2 font-semibold text-white">Yes, right away</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <footer class="mt-10 text-center text-sm text-slate-500">
+          <p>✨ Powered by Nuxt QR Code • Designed for a premium code creation experience</p>
+        </footer>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import type { SVGVariant } from "nuxt-qrcode";
+import { computed } from 'vue';
+import type { SVGVariant } from 'nuxt-qrcode';
 
-const text = ref("Hello World");
-const variant = ref<SVGVariant>("dots");
-const variants = ref(["default", "circle", "pixelated", "rounded", "dots"]);
+const text = ref('https://nuxt.com');
+const variant = ref<SVGVariant>('dots');
+const variants = ['default', 'circle', 'pixelated', 'rounded', 'dots'];
 
-const qr = useQrcode(text, {
-  toBase64: true,
-  variant: {
-    inner: variant.value,
-    marker: "rounded",
-    pixel: variant.value,
-  },
-  radius: 1,
-  blackColor: "currentColor",
-  whiteColor: "#ffffff",
-});
-
-watch(variant, () => {
-  qr.value = useQrcode(text, {
+const qr = computed(() =>
+  useQrcode(text, {
     toBase64: true,
     variant: {
       inner: variant.value,
-      marker: "rounded",
+      marker: 'rounded',
       pixel: variant.value,
     },
     radius: 1,
-    blackColor: "currentColor",
-    whiteColor: "#ffffff",
-  });
-});
+    blackColor: 'currentColor',
+    whiteColor: '#ffffff',
+  }).value
+);
+
+const charCount = computed(() => text.value.length);
 </script>
