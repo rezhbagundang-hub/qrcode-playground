@@ -52,11 +52,11 @@
         <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
           <!-- Info panel -->
           <section class="space-y-6 text-white">
-            <div class="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-sky-200 shadow-lg shadow-sky-500/10 backdrop-blur">
+            <div class="inline-flex rounded-full border border-sky-200/20 bg-sky-100/10 px-4 py-2 text-sm text-sky-100 shadow-lg shadow-sky-500/10 backdrop-blur">
               Beautiful QR code studio
             </div>
 
-            <div class="rounded-[2rem] border border-white/20 bg-white/10 p-10 shadow-2xl shadow-slate-950/30 backdrop-blur-xl ring-1 ring-white/10">
+            <div class="rounded-[2rem] border border-sky-200/15 bg-sky-950/15 p-10 shadow-2xl shadow-slate-950/30 backdrop-blur-xl ring-1 ring-sky-100/10">
               <div class="space-y-6">
                 <div class="space-y-3">
                   <p class="text-sm uppercase tracking-[0.3em] text-sky-300/80">Create, preview, and share</p>
@@ -69,12 +69,12 @@
                 </div>
 
                 <div class="grid gap-4 sm:grid-cols-2">
-                  <div class="rounded-3xl bg-slate-950/90 p-5 border border-white/10 shadow-xl shadow-slate-950/20">
-                    <p class="text-sm text-slate-400">Preview</p>
+                  <div class="rounded-3xl bg-sky-950/80 p-5 border border-sky-200/10 shadow-xl shadow-slate-950/20">
+                    <p class="text-sm text-sky-200">Preview</p>
                     <p class="mt-2 text-4xl font-semibold text-white">Live update</p>
                   </div>
-                  <div class="rounded-3xl bg-slate-950/90 p-5 border border-white/10 shadow-xl shadow-slate-950/20">
-                    <p class="text-sm text-slate-400">Character count</p>
+                  <div class="rounded-3xl bg-sky-950/80 p-5 border border-sky-200/10 shadow-xl shadow-slate-950/20">
+                    <p class="text-sm text-sky-200">Character count</p>
                     <p class="mt-2 text-4xl font-semibold text-white">{{ charCount }}</p>
                   </div>
                 </div>
@@ -83,7 +83,7 @@
           </section>
 
           <!-- QR card -->
-          <section class="rounded-[2rem] border border-white/20 bg-white/10 p-8 shadow-2xl shadow-slate-950/35 backdrop-blur-xl ring-1 ring-white/10">
+          <section class="rounded-[2rem] border border-sky-200/15 bg-sky-950/20 p-8 shadow-2xl shadow-slate-950/35 backdrop-blur-xl ring-1 ring-sky-100/10">
             <div class="space-y-6">
               <div class="space-y-3">
                 <p class="text-sm uppercase tracking-[0.32em] text-slate-400">QR code builder</p>
@@ -92,7 +92,7 @@
               </div>
 
               <div class="space-y-6">
-                <label class="block text-sm font-semibold text-slate-300">Text to encode</label>
+                <label class="block text-sm font-semibold text-sky-100">Text to encode</label>
                 <UInput
                   v-model="text"
                   placeholder="Enter text or URL..."
@@ -101,7 +101,7 @@
                 />
 
                 <div>
-                  <label class="block text-sm font-semibold text-slate-300 mb-3">QR style</label>
+                  <label class="block text-sm font-semibold text-sky-100 mb-3">QR style</label>
                   <USelect
                     v-model="variant"
                     :items="variants"
@@ -112,8 +112,8 @@
                 </div>
               </div>
 
-              <div class="rounded-[2rem] border border-white/15 bg-white/10 p-6 shadow-inner shadow-slate-950/15">
-                <div class="flex items-center justify-between text-sm text-slate-500 mb-4">
+              <div class="rounded-[2rem] border border-sky-200/10 bg-sky-950/15 p-6 shadow-inner shadow-slate-950/15">
+                <div class="flex items-center justify-between text-sm text-sky-200 mb-4">
                   <span class="font-medium text-white">QR preview</span>
                   <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-slate-300">
                     <span class="h-2 w-2 rounded-full bg-emerald-400" /> live
@@ -133,12 +133,12 @@
               </div>
 
               <div class="grid gap-4 sm:grid-cols-2">
-                <div class="rounded-3xl border border-white/10 bg-slate-950/80 p-4 text-slate-300">
-                  <p class="text-sm text-slate-500">Current style</p>
+                <div class="rounded-3xl border border-sky-200/10 bg-sky-950/80 p-4 text-sky-200">
+                  <p class="text-sm text-sky-300">Current style</p>
                   <p class="mt-2 font-semibold text-white">{{ variant }}</p>
                 </div>
-                <div class="rounded-3xl border border-white/10 bg-slate-950/80 p-4 text-slate-300">
-                  <p class="text-sm text-slate-500">Scannable</p>
+                <div class="rounded-3xl border border-sky-200/10 bg-sky-950/80 p-4 text-sky-200">
+                  <p class="text-sm text-sky-300">Scannable</p>
                   <p class="mt-2 font-semibold text-white">Yes, right away</p>
                 </div>
               </div>
